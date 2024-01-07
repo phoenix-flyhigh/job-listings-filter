@@ -35,7 +35,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: https://github.com/phoenix-flyhigh/job-listings-filter
-- Live Site URL: 
+- Live Site URL: https://job-listings-filter-rj7y.vercel.app/
 
 ## My process
 
