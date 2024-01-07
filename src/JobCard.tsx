@@ -62,7 +62,7 @@ const JobCard: React.FC<JobCardProps> = ({
       <Divider />
       <JobTagsWrapper>
         {[role, level, ...tools, ...languages].map((tag: string) => (
-          <JobTag onClick={() => onTagSelect(tag)}>{tag}</JobTag>
+          <JobTag key={tag} onClick={() => onTagSelect(tag)}>{tag}</JobTag>
         ))}
       </JobTagsWrapper>
     </Wrapper>
@@ -152,7 +152,7 @@ const JobDescription = styled.section`
   }
 `;
 
-const CompanyDetails = styled.p`
+const CompanyDetails = styled.div`
   display: flex;
   gap: 1rem;
   align-items: center;
