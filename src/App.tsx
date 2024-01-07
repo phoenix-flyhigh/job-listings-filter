@@ -65,6 +65,7 @@ const Wrapper = styled.div`
   height: 100%;
   width: 100vw;
   background-color: hsl(180, 52%, 96%);
+  overflow: scroll;
 `;
 
 const Background = styled.div`
