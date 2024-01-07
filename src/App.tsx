@@ -71,13 +71,13 @@ const Background = styled.div`
   height: 156px;
   width: 100%;
   background-color: hsl(180, 29%, 50%);
-  background-image: url("../images/bg-header-desktop.svg");
+  background-image: url("./assets/images/bg-header-desktop.svg");
   background-position: top;
   background-repeat: no-repeat;
   position: relative;
 
   @media only screen and (max-width: 720px) {
-    background-image: url("../images/bg-header-mobile.svg");
+    background-image: url("./assets/images/bg-header-mobile.svg");
     margin-bottom: 2rem;
   }
 `;
