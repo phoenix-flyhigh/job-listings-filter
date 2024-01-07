@@ -6,6 +6,10 @@ import { useState } from "react";
 import Filter from "./Filter.tsx";
 
 const App = () => {
+  const findCommonElements = (arr1: string[], arr2: string[]) => {
+    return arr2.some((item) => arr1.includes(item));
+  };
+
   const [selectedTags, setSelectedTags] = useState<string[]>([]);
 
   const handleTagSelect = (selectedTag: string) => {
@@ -21,6 +25,15 @@ const App = () => {
     setSelectedTags([]);
   };
 
+  let filteredData = MockData;
+
+  if (selectedTags.length) {
+    filteredData = filteredData.filter((data) => {
+      const tags = [data.role, data.level, ...data.tools, ...data.languages];
+      return findCommonElements(tags, selectedTags);
+    });
+  }
+
   return (
     <Wrapper>
       <Background />
@@ -32,7 +45,7 @@ const App = () => {
         />
       )}
       <JobContainer>
-        {MockData.map((data: JobDetailsType) => (
+        {filteredData.map((data: JobDetailsType) => (
           <JobCard
             key={data.id}
             jobDetails={data}
