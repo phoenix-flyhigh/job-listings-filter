@@ -18,7 +18,7 @@ const Filter: React.FC<FilterProps> = ({
           <SelectedTag>
             <TagName>{tag}</TagName>
             <RemoveButton onClick={() => onRemoveTag(tag)}>
-              <img src="../images/icon-remove.svg" alt="remove-icon" />
+              <img src="./assets/images/icon-remove.svg" alt="remove-icon" />
             </RemoveButton>
           </SelectedTag>
         ))}
